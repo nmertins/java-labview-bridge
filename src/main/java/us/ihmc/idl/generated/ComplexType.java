@@ -4,15 +4,15 @@ import java.util.Arrays;
 
 /**
 * 
-* Definition of the class "MyComplexType" defined in DDS_Cluster.idl. 
+* Definition of the class "ComplexType" defined in DDS_Cluster.idl. 
 *
 * This file was automatically generated from DDS_Cluster.idl by us.ihmc.idl.generator.IDLGenerator. 
 * Do not update this file directly, edit DDS_Cluster.idl instead.
 *
 */
-public class MyComplexType
+public class ComplexType
 {
-    public MyComplexType()
+    public ComplexType()
     {
         	Text_ = new StringBuilder(255); 
         	Sgl_Array_ = new IDLSequence.Float (4, "type_5");
@@ -20,7 +20,7 @@ public class MyComplexType
         
     }
 
-    public void set(MyComplexType other)
+    public void set(ComplexType other)
     {
         	Text_.setLength(0);
         	Text_.append(other.Text_);
@@ -103,8 +103,8 @@ public class MyComplexType
     {
         if(other == null) return false;
         if(other == this) return true;
-        if(!(other instanceof MyComplexType)) return false;
-        MyComplexType otherMyClass = (MyComplexType)other;
+        if(!(other instanceof ComplexType)) return false;
+        ComplexType otherMyClass = (ComplexType)other;
         boolean returnedValue = true;
 
         returnedValue &= us.ihmc.idl.IDLTools.equals(this.Text_, otherMyClass.Text_);
@@ -131,7 +131,7 @@ public class MyComplexType
     {
 		StringBuilder builder = new StringBuilder();
 		
-      	builder.append("MyComplexType {");
+      	builder.append("ComplexType {");
         builder.append("Text=");
         builder.append(this.Text_);
 

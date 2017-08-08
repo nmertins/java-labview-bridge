@@ -10,19 +10,19 @@ import us.ihmc.idl.IDLSequence;
 
 /**
 * 
-* Topic data type of the struct "MyComplexType" defined in "DDS_Cluster.idl". Use this class to provide the TopicDataType to a Participant. 
+* Topic data type of the struct "ComplexType" defined in "DDS_Cluster.idl". Use this class to provide the TopicDataType to a Participant. 
 *
 * This file was automatically generated from DDS_Cluster.idl by us.ihmc.idl.generator.IDLGenerator. 
 * Do not update this file directly, edit DDS_Cluster.idl instead.
 *
 */
-public class MyComplexTypePubSubType implements TopicDataType<us.ihmc.idl.generated.MyComplexType>
+public class ComplexTypePubSubType implements TopicDataType<us.ihmc.idl.generated.ComplexType>
 {
-	public static final String name = "MyComplexType";
+	public static final String name = "ComplexType";
 	
 	
 	
-    public MyComplexTypePubSubType()
+    public ComplexTypePubSubType()
     {
         
     }
@@ -32,14 +32,14 @@ public class MyComplexTypePubSubType implements TopicDataType<us.ihmc.idl.genera
 
     
     @Override
-   public void serialize(us.ihmc.idl.generated.MyComplexType data, SerializedPayload serializedPayload) throws IOException
+   public void serialize(us.ihmc.idl.generated.ComplexType data, SerializedPayload serializedPayload) throws IOException
    {
       serializeCDR.serialize(serializedPayload);
       write(data, serializeCDR);
       serializeCDR.finishSerialize();
    }
    @Override
-   public void deserialize(SerializedPayload serializedPayload, us.ihmc.idl.generated.MyComplexType data) throws IOException
+   public void deserialize(SerializedPayload serializedPayload, us.ihmc.idl.generated.ComplexType data) throws IOException
    {
       deserializeCDR.deserialize(serializedPayload);
       read(data, deserializeCDR);
@@ -73,12 +73,12 @@ public class MyComplexTypePubSubType implements TopicDataType<us.ihmc.idl.genera
 	}
 
 
-	public final static int getCdrSerializedSize(us.ihmc.idl.generated.MyComplexType data)
+	public final static int getCdrSerializedSize(us.ihmc.idl.generated.ComplexType data)
 	{
 		return getCdrSerializedSize(data, 0);
 	}
 
-	public final static int getCdrSerializedSize(us.ihmc.idl.generated.MyComplexType data, int current_alignment)
+	public final static int getCdrSerializedSize(us.ihmc.idl.generated.ComplexType data, int current_alignment)
 	{
 	    int initial_alignment = current_alignment;
 	            
@@ -99,7 +99,7 @@ public class MyComplexTypePubSubType implements TopicDataType<us.ihmc.idl.genera
 	    return current_alignment - initial_alignment;
 	}
 	
-   public static void write(us.ihmc.idl.generated.MyComplexType data, CDR cdr)
+   public static void write(us.ihmc.idl.generated.ComplexType data, CDR cdr)
    {
 
 	    if(data.getText().length() <= 255)
@@ -119,7 +119,7 @@ public class MyComplexTypePubSubType implements TopicDataType<us.ihmc.idl.genera
 	    us.ihmc.idl.generated.innerclusterTypePubSubType.write(data.getInnercluster(), cdr);
    }
 
-   public static void read(us.ihmc.idl.generated.MyComplexType data, CDR cdr)
+   public static void read(us.ihmc.idl.generated.ComplexType data, CDR cdr)
    {
 
 	    	cdr.read_type_d(data.getText());	
@@ -139,7 +139,7 @@ public class MyComplexTypePubSubType implements TopicDataType<us.ihmc.idl.genera
    }
    
 	@Override
-	public final void serialize(us.ihmc.idl.generated.MyComplexType data, InterchangeSerializer ser)
+	public final void serialize(us.ihmc.idl.generated.ComplexType data, InterchangeSerializer ser)
 	{
 			    ser.write_type_d("Text", data.getText());
 			    
@@ -157,7 +157,7 @@ public class MyComplexTypePubSubType implements TopicDataType<us.ihmc.idl.genera
 	}
 	
 	@Override
-	public final void deserialize(InterchangeSerializer ser, us.ihmc.idl.generated.MyComplexType data)
+	public final void deserialize(InterchangeSerializer ser, us.ihmc.idl.generated.ComplexType data)
 	{
 	    			ser.read_type_d("Text", data.getText());	
 	    	    
@@ -174,16 +174,16 @@ public class MyComplexTypePubSubType implements TopicDataType<us.ihmc.idl.genera
 	    	    
 	}
 
-   public static void staticCopy(us.ihmc.idl.generated.MyComplexType src, us.ihmc.idl.generated.MyComplexType dest)
+   public static void staticCopy(us.ihmc.idl.generated.ComplexType src, us.ihmc.idl.generated.ComplexType dest)
    {
       dest.set(src);
    }
    
    
    @Override
-   public us.ihmc.idl.generated.MyComplexType createData()
+   public us.ihmc.idl.generated.ComplexType createData()
    {
-      return new us.ihmc.idl.generated.MyComplexType();
+      return new us.ihmc.idl.generated.ComplexType();
    }
       
 
@@ -199,25 +199,25 @@ public class MyComplexTypePubSubType implements TopicDataType<us.ihmc.idl.genera
       return name;
    }
    
-   public void serialize(us.ihmc.idl.generated.MyComplexType data, CDR cdr)
+   public void serialize(us.ihmc.idl.generated.ComplexType data, CDR cdr)
 	{
 		write(data, cdr);
 	}
 
-   public void deserialize(us.ihmc.idl.generated.MyComplexType data, CDR cdr)
+   public void deserialize(us.ihmc.idl.generated.ComplexType data, CDR cdr)
    {
         read(data, cdr);
    }
    
-   public void copy(us.ihmc.idl.generated.MyComplexType src, us.ihmc.idl.generated.MyComplexType dest)
+   public void copy(us.ihmc.idl.generated.ComplexType src, us.ihmc.idl.generated.ComplexType dest)
    {
       staticCopy(src, dest);
    }	
 
    
    @Override
-   public MyComplexTypePubSubType newInstance()
+   public ComplexTypePubSubType newInstance()
    {
-   	  return new MyComplexTypePubSubType();
+   	  return new ComplexTypePubSubType();
    }
 }
