@@ -1,0 +1,23 @@
+struct ultrainnerClusterType{
+    sequence<short, 2> I16_Array;
+};
+
+struct superinnerClusterType{
+    double Dbl_Num;
+    ultrainnerClusterType ultrainnerCluster;
+};
+
+struct innerclusterType{
+    float Sgl_Num;
+    boolean Boolean;
+    superinnerClusterType superinnerCluster;
+};
+
+struct MyComplexType{
+    string Text;
+    long I32_Num;
+    long long I64_Num;
+    unsigned short U16_Num;
+    sequence<float, 4> Sgl_Array;
+    innerclusterType innercluster;
+};
