@@ -15,6 +15,10 @@ import us.ihmc.pubsub.subscriber.SubscriberListener;
 
 import java.io.IOException;
 
+/**
+ * This class reads doubles published by the LabView example application
+ * 'RTI Connext DDS Write Double.vi'.
+ */
 public class SimpleDoubleSubscriber
 {
    private class ParticipantListenerImpl implements ParticipantListener

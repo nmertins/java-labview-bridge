@@ -15,6 +15,10 @@ import us.ihmc.pubsub.publisher.PublisherListener;
 import java.io.IOException;
 import java.util.Random;
 
+/**
+ * This class publishes random doubles that can be read by running the LabView example application
+ * 'RTI Connext DDS Read Double.vi'.
+ */
 public class SimpleDoublePublisher
 {
    private final Random random = new Random(234789);
